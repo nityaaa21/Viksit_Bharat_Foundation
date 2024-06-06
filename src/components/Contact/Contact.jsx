@@ -15,7 +15,7 @@ const Contact = () => {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "18f53a43-4055-43dd-bf3e-3013f441e15b");
+    formData.append("access_key", "0d560c66-446e-401d-aba3-512dd7677e63");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -48,12 +48,12 @@ const Contact = () => {
           <li>
             {" "}
             <img src={mail_icon} alt="" />{" "}
-            <a href="mailto:ashishmishrapk@gmail.com">ashishmishrapk@gmail.com</a>
+            <a href="mailto:creditinsta.work@gmail.com">creditinsta.work@gmail.com</a>
           </li>
           <li>
             {" "}
             <img src={phone_icon} alt="" />{" "}
-            <a href="tel:+91 1234567893">+91 1234567893</a>
+            <a href="tel:+91 1234567893">+91 6393675889</a>
           </li>
           <li>
             {" "}
@@ -63,7 +63,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Alaknanda Enclave, Agra<br /> UP 282002, India
+              Alaknanda Enclave, Gurgaon<br /> Haryana 122001, India
             </a>
           </li>
         </ul>
