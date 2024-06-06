@@ -1,22 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./About.css";
 import about_img from "../../assets/about.gif";
 import play_icon from "../../assets/play-icon.gif";
 
 const About = ({ setPlayState }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
-    let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const isScrollingUp = scrollTop < lastScrollTop;
-
-      const aboutRight = document.querySelector('.about-right');
-      if (aboutRight) {
-        aboutRight.style.visibility = isScrollingUp ? 'visible' : 'hidden';
-      }
-
-      lastScrollTop = scrollTop;
+      setIsVisible(window.scrollY < window.innerHeight);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -39,7 +31,7 @@ const About = ({ setPlayState }) => {
           }}
         />
       </div>
-      <div className="about-right">
+      <div className={`about-right ${isVisible ? 'visible' : 'hidden'}`}>
         <h3>ABOUT VIKSIT-BHARAT</h3>
         <h2>Nurturing Tomorrow's Leaders Today</h2>
         <p>Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free! You can do a lot with them. You can modify them. You can use them to design websites for clients, so long as you agree with the Terms of Use. You can even remove all our links if you want to.</p>
