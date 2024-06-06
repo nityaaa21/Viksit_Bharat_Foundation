@@ -62,16 +62,7 @@
   .about-right {
     flex-basis: 100%;
   }
-  .about-right {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s ease-in-out;
-  }
   
-  .about-right.visible {
-    visibility: visible;
-    opacity: 1;
-  }
   
   
   
